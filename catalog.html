@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+  <div class="container">
   <header class="page-header" data-test="header">
     <nav class="navigation">
       <a class="logo" href="index.html" aria-current="page">
@@ -43,7 +44,8 @@
   </header>
   <main class="main-inner" data-test="main">
     <section class="filter" data-test=" filter">
-      <h1 class="filter-title">Гостиницы Седоны</h1>
+      <div class="filter-container">
+        <h1 class="filter-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html"><span class="visually-hidden">Главная</span></a>
@@ -74,32 +76,35 @@
 
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость, ₽ :</legend>
-          <input type="number" name="number-in" id="number-in" min="0" max="9000" placeholder="от" >
-          <input type="number" name="number-out" id="number-out" min="0" max="9000" placeholder="до" >
+          <input class="input" type="number" name="number-in" id="number-in" min="0" max="9000" placeholder="от" >
+          <input class="input" type="number" name="number-out" id="number-out" min="0" max="9000" placeholder="до" >
         </fieldset>
         <button class="button button-submit" type="submit">Применить</button>
         <button class="button button-reset" type="reset">Сбросить</button>
       </form>
+      </div>
     </section>
     <section class="catalog" data-test="catalog">
       <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-      <span class="found-hotels">Найдено гостиниц:38</span>
-      <select class="select-control" aria-label="Сортировка">
-        <option value="popular">Сначала популярное</option>
-        <option value="cheap">Сначала дешёвое</option>
-        <option value="expensive">Сначала дорогое</option>
-      </select>
-      <ul class="sort-view-list">
-        <li class="sort-view-item">
-          <button type="button" class="sort-view-button sort-view-button-carsd"><span class="visually-hidden">Показать карточки</span></button>
-        </li>
-        <li class="sort-view-item">
-          <button type="button" class="sort-view-button sort-view-button-card"><span class="visually-hidden">Показать карточку</span></button>
-        </li>
-        <li class="sort-view-item">
-          <button type="button" class="sort-view-button sort-view-button-list"><span class="visually-hidden">Показать список </span></button>
-        </li>
-      </ul>
+      <div class="container-filter-hotels">
+        <span class="found-hotels">Найдено гостиниц:38</span>
+        <select class="select-control" aria-label="Сортировка">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+        <ul class="sort-view-list">
+          <li class="sort-view-item">
+            <button type="button" class="sort-view-button sort-view-button-carsd"><span class="visually-hidden">Показать карточки</span></button>
+          </li>
+          <li class="sort-view-item">
+            <button type="button" class="sort-view-button sort-view-button-card"><span class="visually-hidden">Показать карточку</span></button>
+          </li>
+          <li class="sort-view-item">
+            <button type="button" class="sort-view-button sort-view-button-list"><span class="visually-hidden">Показать список </span></button>
+          </li>
+        </ul>
+      </div>
       <ul class="hotels-list">
         <li class="hotel-card">
           <a class="hotel-card-link" href="#">
@@ -160,7 +165,7 @@
       </ul>
       <ul class="pagination">
         <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
+          <a class="pagination-current">1</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">2</a>
@@ -172,7 +177,7 @@
           <a class="pagination-link" href="#">4</a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link">...</a>
+          <a class="pagination-dots">...</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">10</a>
@@ -180,13 +185,16 @@
       </ul>
     </section>
     <section class="subscribe-catalog" data-test="subscribe">
-      <h2 class="visually-hidden">Подписаться</h2>
-      <p class="main-description subscribe-catalog-main">Подпишитесь на рассылку</p>
-      <p class="main-description-small subscribe-catalog-small">Только полезная информация и никакого спама, честное бойскаутское!</p>
-      <form action="https://echo.htmlacademy.ru">
-        <input type="email" name="email" id="email" placeholder="Ваш email">
-        <button type="submit" class="subscribe-button button">Подписаться</button>
+      <div class="subscribe-container">
+        <h2 class="visually-hidden">Подписаться</h2>
+        <p class="main-description">Подпишитесь на рассылку</p>
+        <p class="main-description-small">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="visually-hidden" for="email">Email</label>
+        <input class="input" type="email" name="email" id="email" placeholder="Ваш email">
+        <button class="subscribe-button button" type="submit">Подписаться</button>
       </form>
+      </div>
     </section>
   </main>
   <footer class="footer" data-test="footer">
@@ -215,4 +223,5 @@
       </a>
     </section>
   </footer>
+  </div>
 </body>
