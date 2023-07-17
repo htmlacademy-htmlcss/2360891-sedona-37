@@ -107,10 +107,10 @@
         <a class="search-button button brown-button" href="catalog.html">Поиск гостиницы в седоне</a>
     </section>
     <section class="subscribe" data-test="subscribe">
-        <h2 class="visually-hidden">Подписаться</h2>
-        <p class="main-description">Подпишитесь на рассылку</p>
-        <p class="main-description-small">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="get">
+      <h2 class="visually-hidden">Подписаться</h2>
+      <p class="main-description">Подпишитесь на рассылку</p>
+      <p class="main-description-small">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="email">E-mail</label>
         <input class="input" type="email" name="email" id="email" placeholder="Ваш e-mail">
         <button class="subscribe-button button blue-button" type="submit">Подписаться</button>
@@ -146,6 +146,70 @@
       </a>
     </section>
   </footer>
+  </div>
+
+  <div class="modal-container"> <!-- что бы скрыть модальное окно нужно добавить класс hidden-modal -->
+    <div class="modal modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form action="https://echo.htmlacademy.ru" method="get" target="_blank">
+          <ul class="list-search">
+            <li class="list-search-item data-in">
+              <label class="label-search" for="data-in">Дата Заезда:</label>
+              <input type="text" id="data-in" name="date-input" class="date-input" value="27 апреля 2020">
+              <span class="text-input error">Мы не можем отправить вас в прошлое.</span>
+            </li>
+            <li class="list-search-item data-out">
+              <label class="label-search" for="data-out">Дата Выезда:</label>
+              <input type="text" id="data-out" name="date-output" class="date-input" value="1 сентября 2021">
+              <span class="text-input">На эти даты есть свободные номера. Пока есть.</span>
+            </li>
+            <li class="list-search-item adults">
+              <label class="label-search" for="adults">Взрослые:</label>
+              <button type="button" class="button-members button-minus">
+                <span class="visually-hidden">уменьшить на один</span>
+                <svg class="button-members-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+                </svg>
+              </button>
+              <input type="number" id="adults" name="adults" class="members-input" value="2">
+              <button type="button" class="button-members button-plus">
+                <span class="visually-hidden">увеличить на один</span>
+                <svg class="button-members-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+                </svg>
+              </button>
+            </li>
+            <li class="list-search-item children">
+              <label class="label-search label-search-children" for="children">Дети:</label>
+              <div class="children-tooltip">
+                <p class="children-tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+              <button type="button" class="button-info">
+                <span class="visually-hidden">информация о количестве детей</span>
+              </button>
+              <button type="button" class="button-members button-minus">
+                <span class="visually-hidden">уменьшить на один</span>
+                <svg class="button-members-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+                </svg>
+              </button>
+              <input type="number" id="children" name="children" class="members-input" value="2">
+              <button type="button" class="button-members button-plus">
+                <span class="visually-hidden">увеличить на один</span>
+                <svg class="button-members-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <button type="submit" class="modal-button-search blue-button ">найти</button>
+        </form>
+      </section>
+    </div>
   </div>
 </body>
 </html>
