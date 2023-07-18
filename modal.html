@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="./favicons/favicon.png" type="image/png">
 </head>
 <body>
   <div class="container">
@@ -81,6 +82,9 @@
             </div>
         </li>
       </ul>
+    </section>
+    <section class="service" data-test="service">
+      <h2 class="visually-hidden">Сервис</h2>
       <div class="container-description-small">
         <p class="main-description">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
         <p class="main-description-small">Опытный персонал и качественное обслуживание!</p>
@@ -149,7 +153,7 @@
   </div>
 
   <div class="modal-container"> <!-- что бы скрыть модальное окно нужно добавить класс hidden-modal -->
-    <div class="modal modal-search">
+    <div class="modal modal-search" data-test="modal">
       <button class="modal-close-button">
         <span class="visually-hidden">Закрыть</span>
       </button>
@@ -158,17 +162,17 @@
         <form action="https://echo.htmlacademy.ru" method="get" target="_blank">
           <ul class="list-search">
             <li class="list-search-item data-in">
-              <label class="label-search" for="data-in">Дата Заезда:</label>
+              <label class="label-search" for="data-in">дата заезда:</label>
               <input type="text" id="data-in" name="date-input" class="date-input" value="27 апреля 2020">
               <span class="text-input error">Мы не можем отправить вас в прошлое.</span>
             </li>
             <li class="list-search-item data-out">
-              <label class="label-search" for="data-out">Дата Выезда:</label>
-              <input type="text" id="data-out" name="date-output" class="date-input" value="1 сентября 2021">
+              <label class="label-search" for="data-out">дата выезда:</label>
+              <input type="text" id="data-out" name="date-output" class="date-input" value="1 сентября 2023">
               <span class="text-input">На эти даты есть свободные номера. Пока есть.</span>
             </li>
             <li class="list-search-item adults">
-              <label class="label-search" for="adults">Взрослые:</label>
+              <label class="label-search" for="adults">взрослые:</label>
               <button type="button" class="button-members button-minus">
                 <span class="visually-hidden">уменьшить на один</span>
                 <svg class="button-members-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,10 +188,7 @@
               </button>
             </li>
             <li class="list-search-item children">
-              <label class="label-search label-search-children" for="children">Дети:</label>
-              <div class="children-tooltip">
-                <p class="children-tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
-              </div>
+              <label class="label-search label-search-children" for="children">дети:</label>
               <button type="button" class="button-info">
                 <span class="visually-hidden">информация о количестве детей</span>
               </button>
